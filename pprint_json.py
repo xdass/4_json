@@ -15,9 +15,9 @@ def load_data(filepath):
         print('Файл {} не найден'.format(filepath))
 
 
-def pretty_print_json(data):
-    if data is not None:
-        print(json.dumps(data, indent=4, sort_keys=True, ensure_ascii=False))
+def pretty_print_json(json_obj):
+    if json_obj is not None:
+        print(json.dumps(json_obj, indent=4, sort_keys=True, ensure_ascii=False))
     else:
         print('Файл пустой')
 
