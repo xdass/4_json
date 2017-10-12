@@ -9,15 +9,16 @@ def load_data(filepath):
             return None
         with open(filepath, encoding='utf-8') as file:
             raw_data = file.read()
-        json_obj = json.loads(raw_data)
-        return json_obj
+        deserialize_obj = json.loads(raw_data)
+        return deserialize_obj
     else:
         print('Файл {} не найден'.format(filepath))
 
 
-def pretty_print_json(json_obj):
-    if json_obj is not None:
-        print(json.dumps(json_obj, indent=4, sort_keys=True, ensure_ascii=False))
+def pretty_print_json(deserialize_obj):
+    if deserialize_obj is not None:
+        print(json.dumps(deserialize_obj, indent=4, sort_keys=True,
+                         ensure_ascii=False))
     else:
         print('Файл пустой')
 
@@ -29,4 +30,3 @@ if __name__ == '__main__':
         pretty_print_json(json_data)
     else:
         print('Укажите имя файла: python pprint_json.py <filename>')
-
