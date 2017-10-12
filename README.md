@@ -40,7 +40,7 @@ python pprint_json.py 'alco_shops11.json'
 ```
 **Результат работы скрпта**
 ```
-Файл alco_shop1s.json не найден
+Файл alco_shop11s.json не найден
 ```
 
 ###### Запуск скрипта с указанием пустого файла
