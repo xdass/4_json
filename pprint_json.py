@@ -1,6 +1,7 @@
 import json
 import sys
 
+
 def load_data(filepath):
     try:
         with open(filepath, encoding='utf-8') as file:
@@ -17,7 +18,6 @@ def pretty_print_json(deserialize_obj):
 
 
 if __name__ == '__main__':
-    sys.argv.append('alco_shops.json')
     if len(sys.argv) > 1:
         path = sys.argv[1]
         json_data = load_data(path)
